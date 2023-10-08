@@ -1,5 +1,7 @@
 package com.example.bia_tests
 
+import android.content.Intent
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,6 +36,10 @@ class NewTasksAdapter: ListAdapter<Task, NewTasksAdapter.OrderViewHolder>(ItemDi
                 buttonDecline.visibility = View.GONE
                 buttonAccept.visibility = View.GONE
                 textViewAnswer.visibility = View.VISIBLE
+                Handler().postDelayed({
+                    textViewAnswer.visibility = View.GONE
+                    textViewWorkAccept.visibility = View.VISIBLE
+                }, 2000)
             }
             buttonDecline.setOnClickListener {
                 buttonDecline.visibility = View.GONE

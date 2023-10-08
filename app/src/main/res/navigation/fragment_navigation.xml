@@ -23,4 +23,19 @@
         android:label="fragment_tasks"
         tools:layout="@layout/fragment_tasks" >
     </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.bia_tests.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/profileSickFragment"
+        android:name="com.example.bia_tests.ProfileSickFragment"
+        android:label="fragment_profile_sick"
+        tools:layout="@layout/fragment_profile_sick" />
+    <fragment
+        android:id="@+id/newSickFragment"
+        android:name="com.example.bia_tests.NewSickFragment"
+        android:label="fragment_new_sick"
+        tools:layout="@layout/fragment_new_sick" />
 </navigation>

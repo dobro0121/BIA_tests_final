@@ -37,121 +37,12 @@
 
     </com.google.android.material.tabs.TabLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="horizontal"
+    <include
+        android:id="@+id/bottom_navigation"
+        layout="@layout/bottom_navigation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <LinearLayout
-            android:id="@+id/linearLayoutTasks"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageViewTask"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/task" />
-
-            <TextView
-                android:id="@+id/textViewTaskMenu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:text="Задания"
-                android:textStyle="bold"
-                android:textColor="@color/bia_gray_color"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayoutChart"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageViewChart"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/chart" />
-
-            <TextView
-                android:id="@+id/textViewChartMenu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:text="Графики"
-                android:textStyle="bold"
-                android:textColor="@color/bia_gray_color"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayoutChat"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageViewChat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/chat" />
-
-            <TextView
-                android:id="@+id/textViewChatMenu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:text="Чат"
-                android:textStyle="bold"
-                android:textColor="@color/bia_gray_color"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayoutProfile"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageViewProfile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/profile" />
-
-            <TextView
-                android:id="@+id/textViewProfileMenu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:textStyle="bold"
-                android:text="Профиль"
-                android:textColor="@color/bia_gray_color"
-                android:textSize="12sp" />
-        </LinearLayout>
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/textViewTasks"
@@ -173,7 +64,7 @@
         android:layout_height="0dp"
         android:visibility="visible"
         android:background="@color/color_light_gray_blue"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout"
@@ -185,7 +76,7 @@
         android:layout_height="0dp"
         android:visibility="gone"
         android:background="@color/color_light_gray_blue"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout"
