@@ -2,38 +2,40 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.example.bia_test.TasksFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:name="com.example.bia_test.TasksFragment"
-    tools:layout="@layout/fragment_enter_code"
-    tools:context=".TasksFragment">
+    tools:context=".TasksFragment"
+    tools:layout="@layout/fragment_enter_code">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTasks"
         android:layout_marginTop="10dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTasks"
+        app:tabIndicatorColor="@color/text_color_Dark"
+        app:tabIndicatorFullWidth="true"
+        app:tabMode="fixed"
         app:tabSelectedTextColor="@color/text_color_Dark"
         app:tabTextColor="@color/text_color_Middle_Gray_Blue"
-        app:tabIndicatorColor="@color/text_color_Dark"
-        app:tabMode="fixed"
-        app:tabIndicatorFullWidth="true"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Новые" />
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/new_tasks" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="История" />
+            android:background="?attr/selectableItemBackground"
+            android:text="@string/history" />
 
     </com.google.android.material.tabs.TabLayout>
 
@@ -42,28 +44,28 @@
         layout="@layout/bottom_navigation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textViewTasks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Задания"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/task"
         android:textColor="@color/text_color_Dark"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="15dp"
         tools:ignore="MissingConstraints" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewNewTasks"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:visibility="visible"
         android:background="@color/color_light_gray_blue"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,8 +76,8 @@
         android:id="@+id/recyclerViewNHistoryTasks"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:visibility="gone"
         android:background="@color/color_light_gray_blue"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

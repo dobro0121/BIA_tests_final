@@ -81,80 +81,26 @@ class TasksFragment : Fragment() {
         })
 
 
-        // Слишком много кода, можно и в отдельный метод вынести
         val imageViewTasks = view.findViewById<ImageView>(R.id.imageViewTask)
-        val imageViewChart = view.findViewById<ImageView>(R.id.imageViewChart)
-        val imageViewChat = view.findViewById<ImageView>(R.id.imageViewChat)
-        val imageViewProfile = view.findViewById<ImageView>(R.id.imageViewProfile)
         val textViewTasks = view.findViewById<TextView>(R.id.textViewTaskMenu)
-        val textViewChart = view.findViewById<TextView>(R.id.textViewChartMenu)
-        val textViewChat = view.findViewById<TextView>(R.id.textViewChatMenu)
-        val textViewProfile = view.findViewById<TextView>(R.id.textViewProfileMenu)
         val linearLayoutTasks = view.findViewById<LinearLayout>(R.id.linearLayoutTasks)
         val linearLayoutChat = view.findViewById<LinearLayout>(R.id.linearLayoutChat)
         val linearLayoutChart = view.findViewById<LinearLayout>(R.id.linearLayoutChart)
         val linearLayoutProfile = view.findViewById<LinearLayout>(R.id.linearLayoutProfile)
 
-        linearLayoutTasks.setOnClickListener {
-            textViewTasks.setTextColor(Color.parseColor("#2B2D35"))
-            textViewChart.setTextColor(Color.parseColor("#7A7B85"))
-            textViewChat.setTextColor(Color.parseColor("#7A7B85"))
-            textViewProfile.setTextColor(Color.parseColor("#7A7B85"))
-            imageViewTasks.setBackgroundResource(R.drawable.frame_ligth_gray_blue_fill)
-            imageViewTasks.setImageResource(R.drawable.task_dark)
-            imageViewChat.setBackgroundResource(R.drawable.frame_white_fill)
-            imageViewChat.setImageResource(R.drawable.chat)
-            imageViewChart.setBackgroundResource(R.drawable.frame_white_fill)
-            imageViewChart.setImageResource(R.drawable.chart)
-            imageViewProfile.setBackgroundResource(R.drawable.frame_white_fill)
-            imageViewProfile.setImageResource(R.drawable.profile)
-        }
+        textViewTasks.setTextColor(Color.parseColor("#2B2D35"))
+        imageViewTasks.setBackgroundResource(R.drawable.frame_ligth_gray_blue_fill)
+        imageViewTasks.setImageResource(R.drawable.task_dark)
 
         linearLayoutChart.setOnClickListener {
-            textViewTasks.setTextColor(Color.parseColor("#7A7B85"))
-            textViewChat.setTextColor(Color.parseColor("#7A7B85"))
-            textViewChart.setTextColor(Color.parseColor("#2B2D35"))
-            textViewProfile.setTextColor(Color.parseColor("#7A7B85"))
-            imageViewTasks.setBackgroundResource(R.drawable.frame_white_fill)
-            imageViewTasks.setImageResource(R.drawable.task)
-            imageViewChat.setBackgroundResource(R.drawable.frame_white_fill)
-            imageViewChat.setImageResource(R.drawable.chat)
-            imageViewChart.setBackgroundResource(R.drawable.frame_ligth_gray_blue_fill)
-            imageViewChart.setImageResource(R.drawable.chart_dark)
-            imageViewProfile.setBackgroundResource(R.drawable.frame_white_fill)
-            imageViewProfile.setImageResource(R.drawable.profile)
-            //Navigation.findNavController(view).navigate(R.id.chartFragment) - Фрагмент с графиками не создан
+            Navigation.findNavController(view).navigate(R.id.chartsFragment)
         }
 
         linearLayoutChat.setOnClickListener {
-            textViewTasks.setTextColor(Color.parseColor("#7A7B85"))
-            textViewChart.setTextColor(Color.parseColor("#7A7B85"))
-            textViewChat.setTextColor(Color.parseColor("#2B2D35"))
-            textViewProfile.setTextColor(Color.parseColor("#7A7B85"))
-            imageViewTasks.setBackgroundResource(R.drawable.frame_white_fill)
-            imageViewTasks.setImageResource(R.drawable.task)
-            imageViewChat.setBackgroundResource(R.drawable.frame_ligth_gray_blue_fill)
-            imageViewChat.setImageResource(R.drawable.chat_dark)
-            imageViewChart.setBackgroundResource(R.drawable.frame_white_fill)
-            imageViewChart.setImageResource(R.drawable.chart)
-            imageViewProfile.setBackgroundResource(R.drawable.frame_white_fill)
-            imageViewProfile.setImageResource(R.drawable.profile)
-            // Navigation.findNavController(view).navigate(R.id.chatsFragment) - Фрагмент с чатами не создан
+            Navigation.findNavController(view).navigate(R.id.chatsFragment)
         }
 
        linearLayoutProfile.setOnClickListener {
-            textViewTasks.setTextColor(Color.parseColor("#7A7B85"))
-            textViewChart.setTextColor(Color.parseColor("#7A7B85"))
-            textViewChart.setTextColor(Color.parseColor("#7A7B85"))
-            textViewProfile.setTextColor(Color.parseColor("#2B2D35"))
-            imageViewTasks.setBackgroundResource(R.drawable.frame_white_fill)
-            imageViewTasks.setImageResource(R.drawable.task)
-            imageViewChat.setBackgroundResource(R.drawable.frame_white_fill)
-            imageViewChat.setImageResource(R.drawable.chat)
-            imageViewChart.setBackgroundResource(R.drawable.frame_white_fill)
-            imageViewChart.setImageResource(R.drawable.chart)
-            imageViewProfile.setBackgroundResource(R.drawable.frame_ligth_gray_blue_fill)
-            imageViewProfile.setImageResource(R.drawable.profile_dark)
             Navigation.findNavController(view).navigate(R.id.profileFragment)
         }
     }

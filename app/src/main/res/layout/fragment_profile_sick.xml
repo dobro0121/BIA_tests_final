@@ -11,23 +11,23 @@
         android:id="@+id/textViewProfileSickIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Больничный"
         android:background="@color/white"
+        android:padding="15dp"
+        android:paddingStart="50dp"
+        android:text="@string/sick"
         android:textColor="@color/text_color_Dark"
         android:textSize="22sp"
-        android:paddingStart="50dp"
         app:layout_constraintStart_toEndOf="@id/imageButtonBackSick"
         app:layout_constraintTop_toTopOf="parent"
-        android:padding="15dp"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/imageButtonAddSick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/add_circle_line"
         android:layout_marginEnd="10dp"
-        android:backgroundTint="@color/color_light_gray_blue"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/add_circle_line"
         app:layout_constraintBottom_toBottomOf="@+id/textViewProfileSickIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textViewProfileSickIn" />
@@ -49,13 +49,13 @@
         android:id="@+id/textViewNoSick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Нет активных больничных"
+        android:text="@string/no_active_sicks"
         android:textColor="@color/text_color_Middle_Gray_Blue"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

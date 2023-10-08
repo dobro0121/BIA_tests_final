@@ -7,4 +7,39 @@
     <string name="work_excluded"><font color='#F0303F'>Вы исключены из исполнителей\nданного задания</font><font color='#2B2D35'>\nПриносим свои извинения за доставленные неудобства.\nДля уточнения информации,\nможете написать в чат.</font></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="task">Задания</string>
+    <string name="charts">Графики</string>
+    <string name="chat">Чат</string>
+    <string name="profile">Профиль</string>
+    <string name="welcome_to_bia">Добро пожаловать в\nБИА.УдобнаяСмена</string>
+    <string name="enter_phone">Введите свой номер для авторизации</string>
+    <string name="next">Продолжить</string>
+    <string name="charts_not_created">Разметка фрагмента графиков не создана</string>
+    <string name="chat_not_created">Разметка фрагмента чата не создана</string>
+    <string name="enter_code">Введите код из смс</string>
+    <string name="code_has_been_sent">Код был отправлен на номер телефона\n</string>
+    <string name="hint_sms">______</string>
+    <string name="send_repeated_code">Выслать повторный код (01:00)</string>
+    <string name="new_sick">Новый больничный</string>
+    <string name="profile_name">Петров Иван Алексеевич</string>
+    <string name="collector">Сборщик</string>
+    <string name="service_number">Табельный №</string>
+    <string name="service_number1">1111</string>
+    <string name="phone_number_heading">Номер телефона</string>
+    <string name="brigade">Бригада</string>
+    <string name="brigadier">Бригадир</string>
+    <string name="sick_list">Больничный лист</string>
+    <string name="notifications">Оповещения</string>
+    <string name="to_exit">Выйти</string>
+    <string name="sick">Больничный</string>
+    <string name="no_active_sicks">Нет активных больничных</string>
+    <string name="new_tasks">Новые</string>
+    <string name="history">История</string>
+    <string name="assembling">Сборка</string>
+    <string name="warehouse">Склад</string>
+    <string name="shift">Смена</string>
+    <string name="specialization">Специальность</string>
+    <string name="enter_the_chat">Перейти в чат</string>
+    <string name="to_accept">Принять</string>
+    <string name="reject">Отклонить</string>
 </resources>
