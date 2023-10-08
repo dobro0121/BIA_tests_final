@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BIA_tests</string>
+    <string name="work_accept"><font color='#21BF07'>Работа по заданию\nподтверждена</font><font color='#2B2D35'>\nЖдем выхода на смену!</font></string>
+    <string name="work_answer"><b>Ваш ответ принят</b>\nВам поступит подтверждение о выполнении задания</string>
+    <string name="work_decline"><font color='#F0303F'>Выполнение задания отклонено</font><font color='#2B2D35'>\nВы отклонили задание для выполнения</font></string>
+    <string name="work_decline_noactual"><font color='#F0303F'>Выполнение задания отклонено</font><font color='#2B2D35'>\nЗадание не актуально для\nвыполнения</font></string>
+    <string name="work_excluded"><font color='#F0303F'>Вы исключены из исполнителей\nданного задания</font><font color='#2B2D35'>\nПриносим свои извинения за доставленные неудобства.\nДля уточнения информации,\nможете написать в чат.</font></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

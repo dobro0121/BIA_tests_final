@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "137603447127",
+    "project_id": "bia-tests",
+    "storage_bucket": "bia-tests.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137603447127:android:74f08e328a0465e4c86612",
+        "android_client_info": {
+          "package_name": "com.example.bia_tests"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjWwpLIsp7O4QjLtejCtBZr8x98mFJY0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:name = "com.example.bia_test.AuthorizationFragment"
+    tools:layout="@layout/fragment_authorization"
+    tools:context=".AuthorizationFragment"
+    tools:ignore="MissingClass">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/short_product_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:minLines="1"
+        android:singleLine="false"
+        android:text="Добро пожаловать в\nБИА.УдобнаяСмена"
+        android:textColor="@color/text_color_Dark"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogo"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="15dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewEnterNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Введите свой номер для авторизации"
+        android:textColor="@color/text_color_Dark_Gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWelcome"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="15dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.arefbhrn.maskededittext.MaskedEditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frame_black"
+        android:padding="10dp"
+        android:inputType="phone"
+        android:typeface="monospace"
+        android:hint="9990000000"
+        app:allowed_chars="1234567890"
+        app:mask="+7(###)###-##-##"
+        app:keep_hint="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEnterNumber"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="24dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frame_gray_fill"
+        android:text="Продолжить"
+        android:clickable="false"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color_Middle_Gray_Blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
