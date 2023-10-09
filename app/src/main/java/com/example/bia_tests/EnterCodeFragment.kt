@@ -1,10 +1,13 @@
 package com.example.bia_tests
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.graphics.Paint
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.text.Editable
 import android.text.TextUtils
+import android.text.TextWatcher
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -53,7 +56,30 @@ class EnterCodeFragment : Fragment() {
         val phoneNumberVerify = phoneNumber?.trim()
         mAuth= FirebaseAuth.getInstance()
         textViewEnterNumber.text = "Код был отправлен на номер телефона\n" + phoneNumber
-        //Log.d("Appppppppppp", FirebaseApp.getInstance().toString())
+
+        val editTextCode = view.findViewById<MaskedEditText>(R.id.editTextCode)
+        val buttonNextCode = view.findViewById<Button>(R.id.buttonNextCode)
+        editTextCode.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) { }
+
+            @SuppressLint("ResourceAsColor")
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                if(p3 == 11)
+                {
+                    buttonNextCode.setTextColor(Color.WHITE)
+                    buttonNextCode.setBackgroundResource(R.drawable.frame_black_fill)
+                    buttonNextCode.isClickable = true
+                } else {
+                    buttonNextCode.setTextColor(Color.parseColor("#B8C4DB"))
+                    buttonNextCode.setBackgroundResource(R.drawable.frame_gray_fill)
+                    buttonNextCode.isClickable = false
+                }
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+        })
 
         mCallbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             override fun onVerificationCompleted(phoneAuthCredential: PhoneAuthCredential) {
@@ -80,7 +106,7 @@ class EnterCodeFragment : Fragment() {
             Toast.makeText(requireContext(), "Введите номер телефона!", Toast.LENGTH_SHORT).show()
         }
 
-        val buttonNextCode = view.findViewById<Button>(R.id.buttonNextCode)
+
         buttonNextCode.setOnClickListener {
             val editTextCode = view.findViewById<MaskedEditText>(R.id.editTextCode)
             val code = editTextCode.text.toString().replace(" ","")
