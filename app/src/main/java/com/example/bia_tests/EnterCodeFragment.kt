@@ -36,15 +36,10 @@ class EnterCodeFragment : Fragment() {
     private val TAG = "MAIN_TAG"
     private lateinit var view_: View
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_enter_code, container, false)
     }
 
@@ -76,9 +71,7 @@ class EnterCodeFragment : Fragment() {
                 }
             }
 
-            override fun afterTextChanged(p0: Editable?) {
-
-            }
+            override fun afterTextChanged(p0: Editable?) { }
         })
 
         mCallbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
@@ -105,7 +98,6 @@ class EnterCodeFragment : Fragment() {
         } else {
             Toast.makeText(requireContext(), "Введите номер телефона!", Toast.LENGTH_SHORT).show()
         }
-
 
         buttonNextCode.setOnClickListener {
             val editTextCode = view.findViewById<MaskedEditText>(R.id.editTextCode)
@@ -194,7 +186,7 @@ class EnterCodeFragment : Fragment() {
                 Toast.makeText(requireContext(), "Аутентификация $phone прошла успешно!", Toast.LENGTH_SHORT).show()
                 Navigation.findNavController(view_).navigate(R.id.tasksFragment)
             }.addOnFailureListener { e ->
-                Toast.makeText(requireContext(), "${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Введен неверный код из SMS!", Toast.LENGTH_SHORT).show()
             }
     }
 
